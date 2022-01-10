@@ -21,6 +21,5 @@ scoreboard players reset $0 F-Timer
 execute if score $Sec F-Timer matches 0..9 run scoreboard players set $0 F-Timer 0
 
 
-#finish Time Out
-execute if score $Timer F-Timer matches 0 run function random-spawn:core/finish-time-out
+
 title @a actionbar [{"score":{"name":"$Min","objective":"F-Timer"}},{"text":":"},{"score":{"name":"$0","objective":"F-Timer"}},{"score":{"name":"$Sec","objective":"F-Timer"}}]

@@ -13,7 +13,4 @@ execute if score $CountDown F-Timer matches 20 run title @a title [{"text":"â–·â
 execute if score $CountDown F-Timer matches 20 as @a at @s run playsound minecraft:block.note_block.flute master @s ~ ~ ~ 1 1
 
 #0
-execute if score $CountDown F-Timer matches 0 as @a at @s run playsound minecraft:block.note_block.flute master @s ~ ~ ~ 1 2
-execute if score $CountDown F-Timer matches 0 run title @a times 10 70 20
-execute if score $CountDown F-Timer matches 0 run scoreboard players operation $Timer F-Timer = $SetTimer F-Timer
-execute if score $CountDown F-Timer matches 0 run scoreboard players operation $Timer F-Timer += $19 F-Timer
+execute if score $CountDown F-Timer matches 0 run function random-respawn/core/countdown/timer-start

@@ -5,6 +5,6 @@
     }
   },
   "rewards": {
-    "function": "timer:install"
+    "function": "random-respawn:team/join-in-play"
   }
 }
