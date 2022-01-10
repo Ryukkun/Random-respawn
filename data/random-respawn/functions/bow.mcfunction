@@ -26,13 +26,13 @@ execute as @e[tag=sugoi,scores={speed=185..194}] at @s run tp ^ ^ ^1.9
 execute as @e[tag=sugoi,scores={speed=195..204}] at @s run tp ^ ^ ^2.0
 execute as @e[tag=sugoi,scores={speed=205..214}] at @s run tp ^ ^ ^2.1
 execute as @e[tag=sugoi,scores={speed=215..224}] at @s run tp ^ ^ ^2.2
-execute as @e[tag=sugoi,scores={speed=225..334}] at @s run tp ^ ^ ^2.3
-execute as @e[tag=sugoi,scores={speed=235..344}] at @s run tp ^ ^ ^2.4
-execute as @e[tag=sugoi,scores={speed=245..354}] at @s run tp ^ ^ ^2.5
-execute as @e[tag=sugoi,scores={speed=255..364}] at @s run tp ^ ^ ^2.6
-execute as @e[tag=sugoi,scores={speed=265..374}] at @s run tp ^ ^ ^2.7
-execute as @e[tag=sugoi,scores={speed=275..384}] at @s run tp ^ ^ ^2.8
-execute as @e[tag=sugoi,scores={speed=285..394}] at @s run tp ^ ^ ^2.9
+execute as @e[tag=sugoi,scores={speed=225..234}] at @s run tp ^ ^ ^2.3
+execute as @e[tag=sugoi,scores={speed=235..244}] at @s run tp ^ ^ ^2.4
+execute as @e[tag=sugoi,scores={speed=245..254}] at @s run tp ^ ^ ^2.5
+execute as @e[tag=sugoi,scores={speed=255..264}] at @s run tp ^ ^ ^2.6
+execute as @e[tag=sugoi,scores={speed=265..274}] at @s run tp ^ ^ ^2.7
+execute as @e[tag=sugoi,scores={speed=275..284}] at @s run tp ^ ^ ^2.8
+execute as @e[tag=sugoi,scores={speed=285..294}] at @s run tp ^ ^ ^2.9
 execute as @e[tag=sugoi,scores={speed=295..}] at @s run tp ^ ^ ^3.0
 
 execute as @e[tag=sugoi] store result score @s x1 run data get entity @s Pos[0] 1000
