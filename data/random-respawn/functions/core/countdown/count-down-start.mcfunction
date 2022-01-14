@@ -24,10 +24,10 @@ execute if score $gm F-Temp matches 4 unless data entity @s {Inventory:[{Slot:9b
 execute if data storage random-respawn {StartError:4b} run tellraw @a [{"text":"Error:4 MAPが設定されていません"}]
 
 #Spread Test
-execute if data storage random-respawn {StartError:0b} run tellraw @s "拡散test 少々重くなります"
-execute if data storage random-respawn {StartError:0b} run function random-respawn:core/spreadtest/spreadtest
-execute if data storage random-respawn {StartError:0b} if data storage random-respawn {SpreadSuccess:0b} run data merge storage random-respawn {StartError:5b}
-execute if data storage random-respawn {StartError:5b} run tellraw @a [{"text":"Error:5 拡散させるスペースが足りませんでした"}]
+execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 1..3 run tellraw @s "拡散test 少々重くなります"
+execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 1..3 run function random-respawn:core/spreadtest/spreadtest
+execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 1..3 if data storage random-respawn {SpreadSuccess:0b} run data merge storage random-respawn {StartError:5b}
+execute if data storage random-respawn {StartError:5b} if score $gm F-Temp matches 1..3 run tellraw @a [{"text":"Error:5 拡散させるスペースが足りませんでした"}]
 
 #Sound
 execute unless data storage random-respawn {StartError:0b} run playsound minecraft:entity.player.breath master @a ~ ~ ~ 1 
