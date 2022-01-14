@@ -12,8 +12,8 @@ execute as @a[team=Player] unless score @s F-Meet = $PlayerCount F-Meet run data
 
 
 #particle
-execute as @a[team=Player,scores={F-Meet=2..}] run function random-respawn:core/meet-particle
+execute as @a[team=Player,scores={F-Meet=2..}] run function random-respawn:core/meet/meet-particle
 
 
 #finish meet
-execute if data storage random-respawn {MeetSuccess:1b} run function random-respawn:core/finish-meet
+execute if data storage random-respawn {MeetSuccess:1b} run function random-respawn:core/finish/finish-meet

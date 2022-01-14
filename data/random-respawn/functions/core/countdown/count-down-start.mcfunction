@@ -34,7 +34,22 @@ execute unless data storage random-respawn {StartError:0b} run playsound minecra
 
 
 #いいよ! スタートだ!  いっけええぇぇぇぇぇ
-execute if data storage random-respawn {StartError:0b} run schedule function random-respawn/core/countdown/timer-start 5s append
-execute if data storage random-respawn {StartError:0b} run schedule function random-respawn/core/countdown/1 4s append
-execute if data storage random-respawn {StartError:0b} run schedule function random-respawn/core/countdown/2 3s append
-execute if data storage random-respawn {StartError:0b} run schedule function random-respawn/core/countdown/3 2s append
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/timer-start 5s append
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/1 4s append
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/2 3s append
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/3 2s append
+
+
+# インベントリ取得
+
+#### kill 一応
+execute if data storage random-respawn {StartError:0b} run kill @e[tag=ILoveFilledMap]
+
+#### reset storage
+execute if data storage random-respawn {StartError:0b} run data remove storage minecraft:random-respawn FilledMap
+
+#### Get filled_map
+execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 1..4 run data modify storage random-respawn FilledMap append from entity @s Inventory.[{Slot:9b}]
+execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 4 run data modify storage random-respawn FilledMap append from entity @s Inventory.[{Slot:10b}]
+execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 4 run data modify storage random-respawn FilledMap append from entity @s Inventory.[{Slot:11b}]
+execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 4 run data modify storage random-respawn FilledMap append from entity @s Inventory.[{Slot:12b}]
