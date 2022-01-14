@@ -1,5 +1,8 @@
+# load by book 
+# @s = Player
+#-----------------------
 
-#reset(この世に生まれ落ち 早17年 初めてのstrage)
+#reset
 data merge storage random-respawn {StartError:0b}
 
 #Player人数
@@ -31,4 +34,7 @@ execute unless data storage random-respawn {StartError:0b} run playsound minecra
 
 
 #いいよ! スタートだ!  いっけええぇぇぇぇぇ
-execute if data storage random-respawn {StartError:0b} run scoreboard players set $CountDown F-Timer 100
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn/core/countdown/timer-start 5s append
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn/core/countdown/1 4s append
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn/core/countdown/2 3s append
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn/core/countdown/3 2s append

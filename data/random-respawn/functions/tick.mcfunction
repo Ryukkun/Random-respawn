@@ -1,8 +1,6 @@
 #tick
 #----------
 
-#Count Down
-execute if score $CountDown F-Timer matches 0.. run function random-respawn:core/countdown/count-down
 
 #Main Game
 execute if score $Timer F-Timer matches 0.. run function random-respawn:core/main
