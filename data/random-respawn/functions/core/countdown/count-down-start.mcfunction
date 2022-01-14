@@ -19,8 +19,8 @@ execute unless score $gm F-Temp matches 1..4 run data merge storage random-respa
 execute if data storage random-respawn {StartError:3b} run tellraw @a [{"text":"Error:3 GM"}]
 
 #Filled Map
-execute if score $gm F-Temp matches 1..3 if data entity @s {Inventory:[{Slot:9b,id:"minecraft:filled_map"}]} run data merge storage random-respawn {StartError:4b}
-execute if score $gm F-Temp matches 4 if data entity @s {Inventory:[{Slot:9b,id:"minecraft:filled_map"},{Slot:10b,id:"minecraft:filled_map"},{Slot:11b,id:"minecraft:filled_map"},{Slot:12b,id:"minecraft:filled_map"}]} run data merge storage random-respawn {StartError:4b}
+execute if score $gm F-Temp matches 1..3 unless data entity @s {Inventory:[{Slot:9b,id:"minecraft:filled_map"}]} run data merge storage random-respawn {StartError:4b}
+execute if score $gm F-Temp matches 4 unless data entity @s {Inventory:[{Slot:9b,id:"minecraft:filled_map"},{Slot:10b,id:"minecraft:filled_map"},{Slot:11b,id:"minecraft:filled_map"},{Slot:12b,id:"minecraft:filled_map"}]} run data merge storage random-respawn {StartError:4b}
 execute if data storage random-respawn {StartError:4b} run tellraw @a [{"text":"Error:4 MAPが設定されていません"}]
 
 #Spread Test
