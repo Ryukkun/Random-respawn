@@ -6,6 +6,7 @@ scoreboard objectives add F-Timer dummy
 scoreboard objectives add F-Meet dummy
 scoreboard objectives add F-Temp dummy
 scoreboard objectives add F-MapCenter dummy
+scoreboard objectives add F-Member dummy
 scoreboard objectives add F-Trigger trigger
 team add Spec
 team add Player

@@ -19,7 +19,7 @@ execute unless score $DistanceZ F-MapCenter matches 0 run scoreboard players ope
 execute unless score $DistanceZ F-MapCenter matches 0 at @s run tp @s ~ ~ ~ 0 0
 execute unless score $DistanceZ F-MapCenter matches 0 run function random-respawn:map-center/marker/calc
 
-execute at @s align xz run summon minecraft:marker ~ -70 ~ {NoGravity:1b,Silent:1b,Tags:["map-center"]}
+execute at @s align xz run summon minecraft:armor_stand ~ -70 ~ {NoGravity:1b,Silent:1b,Tags:["map-center"]}
 execute at @s run forceload add ~ ~
 
 tp @s @e[tag=map-return,limit=1]

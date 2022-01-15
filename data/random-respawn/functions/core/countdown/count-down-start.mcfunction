@@ -19,9 +19,8 @@ execute unless score $gm F-Temp matches 1..4 run data merge storage random-respa
 execute if data storage random-respawn {StartError:3b} run tellraw @a [{"text":"Error:3 GM"}]
 
 #Filled Map
-execute if score $gm F-Temp matches 1..3 unless data entity @s {Inventory:[{Slot:9b,id:"minecraft:filled_map"}]} run data merge storage random-respawn {StartError:4b}
-execute if score $gm F-Temp matches 4 unless data entity @s {Inventory:[{Slot:9b,id:"minecraft:filled_map"},{Slot:10b,id:"minecraft:filled_map"},{Slot:11b,id:"minecraft:filled_map"},{Slot:12b,id:"minecraft:filled_map"}]} run data merge storage random-respawn {StartError:4b}
-execute if data storage random-respawn {StartError:4b} run tellraw @a [{"text":"Error:4 MAPが設定されていません"}]
+data merge storage random-respawn {Setting:[{MapEnable:1b}]}
+execute if score $gm F-Temp matches 1..3 unless data entity @s {Inventory:[{Slot:9b,id:"minecraft:filled_map"}]} run data merge storage random-respawn {Setting:[{MapEnable:1b}]}
 
 #Spread Test
 execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 1..3 run tellraw @s "拡散test 少々重くなります"
@@ -49,7 +48,4 @@ execute if data storage random-respawn {StartError:0b} run kill @e[tag=ILoveFill
 execute if data storage random-respawn {StartError:0b} run data remove storage minecraft:random-respawn FilledMap
 
 #### Get filled_map
-execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 1..4 run data modify storage random-respawn FilledMap append from entity @s Inventory.[{Slot:9b}]
-execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 4 run data modify storage random-respawn FilledMap append from entity @s Inventory.[{Slot:10b}]
-execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 4 run data modify storage random-respawn FilledMap append from entity @s Inventory.[{Slot:11b}]
-execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 4 run data modify storage random-respawn FilledMap append from entity @s Inventory.[{Slot:12b}]
+execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 1..3 run data modify storage random-respawn FilledMap append from entity @s Inventory.[{Slot:9b}]
