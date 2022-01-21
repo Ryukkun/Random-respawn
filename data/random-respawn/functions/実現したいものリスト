@@ -9,19 +9,19 @@
 
 ・✓ GM=4の時はspreadtestしない
 
-・Play中にアイテムを投げられないように 消えないようにする GM=4 の時だけ
-        ⇒ map-centerをアーマースタンドにし、地図を持たせる
-        ⇒ 所定のインベントリが地図以外の状態になったら、その場にアイテム召喚(ディレイ入れておく) 空気だった場合はパス
-            ⇒ dataで@p[distance=..0]のそのインベントリからコピー
-            ⇒ @p[re]のUUIDをOwnerに代入
-        ⇒ map-centerから地図をぶち込む
-
 ・Play後に回覧できるようにSpawnpointを召喚しておく 出来ればCustomNameも
         ⇒ forceloadしておく
         ⇒ member作って同じにしておく
         ⇒ 試合終了とともに発光とCustom Name 出す
 
 ・もし初期スポーン地点に戻ってしてしまった倍の事を考え、初期スポの位置を記録しておき、Play中に初期リスに来た奴はmemberが同じ奴のspawnpoinに飛ばす
+    ⇨ summon markor
+    ⇨ 近くの人とmemberを同じに
+    	⇨ scheduleで1秒後にHead から取得
+        ⇨ 失敗してたら一秒後にもう一度実行
+        ⇨ 成功してたらtag
+
+・初期スポーン地点の取得
 
 ・reset用ファイルを作っておく
 
