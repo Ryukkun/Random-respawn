@@ -13,5 +13,6 @@ execute if data storage random-respawn {Setting:[{MapEnable:1b}]} run function r
 
 # Spawn Point
 execute at @a[team=Player] run summon marker ~ ~ ~ {Tags:["First-SP"],NoGravity:1b}
+execute at @a[team=Player] run forceload add ~ ~
 execute as @a[team=Player] at @s run scoreboard players operation @e[tag=First-SP,sort=nearest,limit=1] F-Member = @s F-Member
 schedule function random-respawn:core/countdown/sp/schedule-sp 1s

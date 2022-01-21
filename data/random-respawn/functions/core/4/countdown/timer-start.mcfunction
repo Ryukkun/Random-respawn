@@ -12,6 +12,7 @@ execute unless data storage random-respawn {SpreadSuccess:0b} run scoreboard pla
 execute unless data storage random-respawn {SpreadSuccess:0b} run clear @a
 
 execute unless data storage random-respawn {SpreadSuccess:0b} at @a[team=Player] run summon marker ~ ~ ~ {Tags:["First-SP"],NoGravity:1b}
+execute unless data storage random-respawn {SpreadSuccess:0b} at @a[team=Player] run forceload add ~ ~
 execute unless data storage random-respawn {SpreadSuccess:0b} as @a[team=Player] at @s run scoreboard players operation @e[tag=First-SP,sort=nearest,limit=1] F-Member = @s F-Member
 execute unless data storage random-respawn {SpreadSuccess:0b} run function random-respawn:core/countdown/sp/schedule-sp
 
