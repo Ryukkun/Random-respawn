@@ -2,7 +2,7 @@
 # @s = None?
 #----------------------
 
-function random-respawn:core/spreadplayers/spreadplayers
+function random-respawn:core/1-3/spreadplayers/spreadplayers
 
 # 始める時に実行
 execute as @a at @s run playsound minecraft:block.note_block.flute master @s ~ ~ ~ 1 2

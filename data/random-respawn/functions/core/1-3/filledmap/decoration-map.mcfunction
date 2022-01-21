@@ -13,7 +13,7 @@ data modify entity @s ArmorItems[3] set from entity @e[tag=map-center,limit=1] A
 data modify entity @s ArmorItems[3].tag merge value {Decorations:[{x:0b,z:0b,type:4b,rot:180.0d,id:""}]}
 
 ### みんな乱数ほしい顔してた
-function random-respawn:core/random-str/random-str
+function random-respawn:core/1-3/random-str/random-str
 
 
 ### Pos代入
@@ -33,5 +33,5 @@ execute if data entity @p Inventory[{Slot:103b}] run tag @p add Did-Head
 execute if data entity @p Inventory[{Slot:103b}] run kill @s
 
 # 失敗した子たち
-execute unless data entity @p Inventory[{Slot:103b}] run schedule clear random-respawn:core/filledmap/decoration-map-schedule
-execute unless data entity @p Inventory[{Slot:103b}] run schedule function random-respawn:core/filledmap/decoration-map-schedule 1s
+execute unless data entity @p Inventory[{Slot:103b}] run schedule clear random-respawn:core/1-3/filledmap/decoration-map-schedule
+execute unless data entity @p Inventory[{Slot:103b}] run schedule function random-respawn:core/1-3/filledmap/decoration-map-schedule 1s
