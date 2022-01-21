@@ -42,10 +42,10 @@ execute if data storage random-respawn {StartError:0b} run schedule function ran
 execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/3 2s append
 
 
-# インベントリ取得
+#reset
+execute if data storage random-respawn {StartError:0b} run function random-respawn:core/reset-tags
 
-#### kill 一応
-execute if data storage random-respawn {StartError:0b} run kill @e[tag=ILoveFilledMap]
+# インベントリ取得
 
 #### reset storage
 execute if data storage random-respawn {StartError:0b} run data remove storage minecraft:random-respawn FilledMap
