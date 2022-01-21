@@ -27,7 +27,7 @@ data modify entity @s ArmorItems[3].tag.Decorations[0].z set from entity @s Pos[
 # Give Map
 execute at @s run item replace entity @p armor.head from entity @s armor.head
 
-execute if data entity @p Inventory[{Slot:103b}] run tag @p add MapHat
+execute if data entity @p Inventory[{Slot:103b}] run tag @p add Did-Head
 
 # bye
 execute if data entity @p Inventory[{Slot:103b}] run kill @s
