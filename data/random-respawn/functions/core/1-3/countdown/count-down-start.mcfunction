@@ -19,14 +19,14 @@ execute unless score $gm F-Temp matches 1..4 run data merge storage random-respa
 execute if data storage random-respawn {StartError:3b} run tellraw @a [{"text":"Error:3 GM"}]
 
 #Filled Map
-data merge storage random-respawn {Setting:[{MapEnable:1b}]}
-execute if score $gm F-Temp matches 1..3 unless data entity @s {Inventory:[{Slot:9b,id:"minecraft:filled_map"}]} run data merge storage random-respawn {Setting:[{MapEnable:1b}]}
+data merge storage random-respawn {Setting:[{MapEnable:0b}]}
+execute if data entity @s {Inventory:[{Slot:-106b,id:"minecraft:filled_map"}]} run data merge storage random-respawn {Setting:[{MapEnable:1b}]}
 
 #Spread Test
-execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 1..3 run tellraw @s "拡散test 少々重くなります"
-execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 1..3 run function random-respawn:core/spreadtest/spreadtest
-execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 1..3 if data storage random-respawn {SpreadSuccess:0b} run data merge storage random-respawn {StartError:5b}
-execute if data storage random-respawn {StartError:5b} if score $gm F-Temp matches 1..3 run tellraw @a [{"text":"Error:5 拡散させるスペースが足りませんでした"}]
+execute if data storage random-respawn {StartError:0b} run tellraw @s "拡散test 少々重くなります"
+execute if data storage random-respawn {StartError:0b} run function random-respawn:core/spreadtest/spreadtest
+execute if data storage random-respawn {StartError:0b} if data storage random-respawn {SpreadSuccess:0b} run data merge storage random-respawn {StartError:5b}
+execute if data storage random-respawn {StartError:5b} run tellraw @a [{"text":"Error:5 拡散させるスペースが足りませんでした"}]
 
 #Sound
 execute unless data storage random-respawn {StartError:0b} run playsound minecraft:entity.player.breath master @a ~ ~ ~ 1 
@@ -36,8 +36,7 @@ execute unless data storage random-respawn {StartError:0b} run playsound minecra
 
 #いいよ! スタートだ!  いっけええぇぇぇぇぇ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 1..3 run schedule function random-respawn:core/1-3/countdown/timer-start 5s append
-execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 4 run schedule function random-respawn:core/4/countdown/timer-start 5s append
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/1-3/countdown/timer-start 5s append
 execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/1 4s append
 execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/2 3s append
 execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/3 2s append
@@ -52,4 +51,4 @@ execute if data storage random-respawn {StartError:0b} run kill @e[tag=ILoveFill
 execute if data storage random-respawn {StartError:0b} run data remove storage minecraft:random-respawn FilledMap
 
 #### Get filled_map
-execute if data storage random-respawn {StartError:0b} if score $gm F-Temp matches 1..3 run data modify storage random-respawn FilledMap append from entity @s Inventory.[{Slot:-106b}]
+execute if data storage random-respawn {StartError:0b} if data storage random-respawn {Setting:[{MapEnable:1b}]} run data modify storage random-respawn FilledMap append from entity @s Inventory.[{Slot:-106b}]

@@ -1,0 +1,1 @@
+execute as @a[team=Player,tag=!Did-MCID] run function random-respawn:core/countdown/sp/set-sp

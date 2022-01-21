@@ -10,8 +10,10 @@ title @a times 10 70 20
 # 成功した場合
 execute unless data storage random-respawn {SpreadSuccess:0b} run scoreboard players operation $Timer F-Timer = $SetTimer F-Timer
 execute unless data storage random-respawn {SpreadSuccess:0b} run clear @a
+
 execute unless data storage random-respawn {SpreadSuccess:0b} at @a[team=Player] run summon marker ~ ~ ~ {Tags:["First-SP"],NoGravity:1b}
-execute unless data storage random-respawn {SpreadSuccess:0b} as @a[team=Player] at @s run function random-respawn:core/countdown/set-sp
+execute unless data storage random-respawn {SpreadSuccess:0b} as @a[team=Player] at @s run scoreboard players operation @e[tag=First-SP,sort=nearest,limit=1] F-Member = @s F-Member
+execute unless data storage random-respawn {SpreadSuccess:0b} run function random-respawn:core/countdown/sp/schedule-sp
 
 
 # 失敗したのか..
