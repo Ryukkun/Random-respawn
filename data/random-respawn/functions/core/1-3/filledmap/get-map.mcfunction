@@ -11,4 +11,4 @@ data modify entity @e[tag=map-center,limit=1] ArmorItems[3] set from storage min
 
 
 # みんなに配ろう!!
-execute as @a[team=Player] at @s run summon armor_stand ~ ~-10 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["ILoveFilledMap"]}
+execute as @a[team=Player] at @s run summon armor_stand ~ ~-5 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["ILoveFilledMap"]}

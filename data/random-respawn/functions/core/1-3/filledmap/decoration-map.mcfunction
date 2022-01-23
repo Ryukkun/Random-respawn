@@ -33,5 +33,5 @@ execute if data entity @p Inventory[{Slot:103b,id:"minecraft:filled_map"}] run t
 execute if data entity @p Inventory[{Slot:103b,id:"minecraft:filled_map"}] run kill @s
 
 # 失敗した子たち
-execute unless data entity @p Inventory[{Slot:103b,id:"minecraft:filled_map"}] run schedule clear random-respawn:core/1-3/filledmap/decoration-map-schedule
-execute unless data entity @p Inventory[{Slot:103b,id:"minecraft:filled_map"}] run schedule function random-respawn:core/1-3/filledmap/decoration-map-schedule 1s
+#execute unless data entity @p Inventory[{Slot:103b,id:"minecraft:filled_map"}] run schedule clear random-respawn:core/1-3/filledmap/decoration-map-schedule
+#execute unless data entity @p Inventory[{Slot:103b,id:"minecraft:filled_map"}] run schedule function random-respawn:core/1-3/filledmap/decoration-map-schedule 1s
