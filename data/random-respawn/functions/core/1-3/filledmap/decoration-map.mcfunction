@@ -2,7 +2,7 @@
 # @s = Mapのdata変更する用ArmorStand
 #-------------------------------------------------------------------
 
-tellraw @p "実行したの！"
+
 data modify entity @s ArmorItems[3] set from entity @e[tag=map-center,limit=1] ArmorItems[3]
 
 
