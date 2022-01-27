@@ -11,6 +11,7 @@ title @a times 10 70 20
 execute unless data storage random-respawn {SpreadSuccess:0b} run scoreboard players operation $Timer F-Timer = $SetTimer F-Timer
 execute unless data storage random-respawn {SpreadSuccess:0b} run clear @a
 execute unless data storage random-respawn {SpreadSuccess:0b} run scoreboard players set $StopW F-Timer 0
+execute unless data storage random-respawn {SpreadSuccess:0b} as @a[team=Player] at @s run function random-respawn:core/sp/summon-sp
 
 
 # 失敗したのか..

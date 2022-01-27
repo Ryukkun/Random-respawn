@@ -10,4 +10,5 @@ title @a times 10 70 20
 scoreboard players operation $Timer F-Timer = $SetTimer F-Timer
 clear @a
 scoreboard players set $StopW F-Timer 0
+execute as @a[team=Player] at @s run function random-respawn:core/sp/summon-sp
 execute if data storage random-respawn {Setting:[{MapEnable:1b}]} run function random-respawn:core/1-3/filledmap/get-map
