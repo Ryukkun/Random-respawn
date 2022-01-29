@@ -18,6 +18,12 @@ execute if data storage random-respawn {StartError:2b} run tellraw @a [{"text":"
 execute unless score $gm F-Temp matches 1..4 run data merge storage random-respawn {StartError:3b}
 execute if data storage random-respawn {StartError:3b} run tellraw @a [{"text":"Error:3 GM"}]
 
+#Spread Test
+execute if data storage random-respawn {StartError:0b} run tellraw @s "拡散test 少々重くなります"
+execute if data storage random-respawn {StartError:0b} run function random-respawn:core/4/spreadtest/spreadtest
+execute if data storage random-respawn {StartError:0b} if data storage random-respawn {SpreadSuccess:0b} run data merge storage random-respawn {StartError:5b}
+execute if data storage random-respawn {StartError:5b} run tellraw @a [{"text":"Error:5 拡散させるスペースが足りませんでした"}]
+
 #Sound
 execute unless data storage random-respawn {StartError:0b} run playsound minecraft:entity.player.breath master @a ~ ~ ~ 1 
 
