@@ -11,7 +11,3 @@ scoreboard players operation $Timer F-Timer = $SetTimer F-Timer
 clear @a
 scoreboard players set $StopW F-Timer 0
 execute as @a[team=Player] at @s run spawnpoint @s ~ ~ ~
-
-
-# 失敗したのか..
-#execute if data storage random-respawn {SpreadSuccess:0b} run tellraw @a [{"text":"Error 拡散に失敗しました"}]

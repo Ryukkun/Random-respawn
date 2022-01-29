@@ -1,4 +1,4 @@
-・地図は持ってるかもって無いかで自動的に判別 storage 使用
+・✓ 地図は持ってるかもって無いかで自動的に判別 storage 使用
     ・地図意外だった場合も自動で無効
 
 ・自動設定機能（おすすめ）
@@ -9,21 +9,20 @@
 
 ・✓ GM=4の時はspreadtestしない
 
-・Play後に回覧できるようにSpawnpointを召喚しておく 出来ればCustomNameも
+・✓ Play後に回覧できるようにSpawnpointを召喚しておく 出来ればCustomNameも
         ⇒ forceloadしておく
         ⇒ member作って同じにしておく
         ⇒ 試合終了とともに発光とCustom Name 出す
 
-・もし初期スポーン地点に戻ってしてしまった倍の事を考え、初期スポの位置を記録しておき
+・✓ もし初期スポーン地点に戻ってしてしまった倍の事を考え、初期スポの位置を記録しておき
     ⇨ summon markor
     ⇨ 近くの人とmemberを同じに
     	⇨ scheduleで1秒後にHead から取得
         ⇨ 失敗してたら一秒後にもう一度実行
         ⇨ 成功してたらtag
 
-・Play中に初期リスに来た奴はmemberが同じ奴のspawnpoinに飛ばす
+・✓ Play中に初期リスに来た奴はmemberが同じ奴のspawnpoinに飛ばす
 
-・初期スポーン地点の取得
 
 ・reset用ファイルを作っておく
 

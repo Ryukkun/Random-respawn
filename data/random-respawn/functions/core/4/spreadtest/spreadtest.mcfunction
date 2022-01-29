@@ -14,8 +14,13 @@ execute as @a[team=Player] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Invu
 execute as @e[tag=First-SP] at @s run scoreboard players operation @s F-Member = @p F-Member
 
 #4086
-execute if score $gm F-Temp matches 3 run function random-respawn:core/4/spreadtest/4086
+execute if score $gm F-Temp matches 4 run function random-respawn:core/4/spreadtest/4086
 
 
-# force load
-execute at @e[tag=First-SP] run forceload add ~ ~
+
+# 成功
+execute unless data storage random-respawn {SpreadSuccess:0b} run scoreboard players set $SpreadTestChunk F-Timer 0
+execute unless data storage random-respawn {SpreadSuccess:0b} run function random-respawn:core/sp/forceload
+
+#失敗
+execute if data storage random-respawn {SpreadSuccess:0b} run kill @e[tag=First-SP]
