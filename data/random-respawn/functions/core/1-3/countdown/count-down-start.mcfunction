@@ -36,14 +36,12 @@ execute unless data storage random-respawn {StartError:0b} run playsound minecra
 
 #いいよ! スタートだ!  いっけええぇぇぇぇぇ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/1-3/countdown/timer-start 5s append
-execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/1 4s append
-execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/2 3s append
-execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/3 2s append
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/1-3/countdown/timer-start 10s append
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/1 9s append
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/2 8s append
+execute if data storage random-respawn {StartError:0b} run schedule function random-respawn:core/countdown/3 7s append
 
 
-#reset
-execute if data storage random-respawn {StartError:0b} run function random-respawn:core/reset-tags
 
 # インベントリ取得
 
