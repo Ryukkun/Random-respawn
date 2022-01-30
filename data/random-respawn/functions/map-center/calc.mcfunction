@@ -1,9 +1,10 @@
 # load by random-respawn:map-center/main
 #@s = 本から実行した人
 #$gm  1=512 2=1024 3=2048 4=4096
-#---------------------------------
+#-------------------------------------------------------------------------------------------
 
-#x
+# map-centerの座標
+### x
 scoreboard players operation $MapCenterX F-MapCenter += $64 F-Temp
 scoreboard players operation $MapCenterX2 F-MapCenter = $MapCenterX F-MapCenter
 execute if score $gm F-Temp matches 1 run scoreboard players operation $MapCenterX2 F-MapCenter %= $512 F-Temp
@@ -19,9 +20,9 @@ execute if score $gm F-Temp matches 3 run scoreboard players operation $MapCente
 execute if score $gm F-Temp matches 4 run scoreboard players operation $MapCenterX F-MapCenter += $2048 F-Temp
 scoreboard players operation $MapCenterX F-MapCenter -= $64 F-Temp
 
-#-------------------------------------------------------------------------------------------
+#----------------------------------------
 
-#z
+### z
 scoreboard players operation $MapCenterZ F-MapCenter += $64 F-Temp
 scoreboard players operation $MapCenterZ2 F-MapCenter = $MapCenterZ F-MapCenter
 execute if score $gm F-Temp matches 1 run scoreboard players operation $MapCenterZ2 F-MapCenter %= $512 F-Temp
@@ -52,6 +53,7 @@ scoreboard players operation $DistanceX F-MapCenter -= $PlayerX F-MapCenter
 scoreboard players operation $DistanceZ F-MapCenter -= $PlayerZ F-MapCenter
 
 #------------------------------------------------------------------------------------------------------
+
 # TP
 ### X
 execute unless score $DistanceX F-MapCenter matches 0 run scoreboard players operation $Distance F-MapCenter = $DistanceX F-MapCenter
