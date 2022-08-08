@@ -11,4 +11,5 @@ scoreboard players operation $Timer F-Timer = $SetTimer F-Timer
 clear @a
 scoreboard players set $StopW F-Timer 0
 execute as @a[team=Player] at @s run spawnpoint @s ~ ~ ~
+execute store result score @a[team=Player] F-GameCount run scoreboard players add $ F-GameCount 1
 execute if data storage random-respawn {Setting:[{MapEnable:1b}]} run function random-respawn:core/1-3/filledmap/get-map

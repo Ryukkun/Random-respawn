@@ -1,4 +1,3 @@
-execute if score $timer F-Timer matches 1.. run team join Spec @s
-execute if score $timer F-Timer matches 1.. at @e[tag=map-center,limit=1] run tp @s @p[team=Player]
-execute if score $timer F-Timer matches 1.. at @s run playsound minecraft:entity.guardian.death master @s ~ ~ ~ 1
-execute if score $timer F-Timer matches 1.. run advancement revoke @s only random-respawn:entered_world_team
+execute if score $timer F-Timer matches 0.. run team join Spec @s
+execute if score $timer F-Timer matches 0.. at @e[tag=map-center,limit=1] run tp @s @p[team=Player]
+execute if score $timer F-Timer matches 0.. at @s run playsound minecraft:entity.guardian.death master @s ~ ~ ~ 1

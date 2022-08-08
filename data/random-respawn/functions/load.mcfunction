@@ -7,7 +7,9 @@ scoreboard objectives add F-Meet dummy
 scoreboard objectives add F-Temp dummy
 scoreboard objectives add F-MapCenter dummy
 scoreboard objectives add F-Member dummy
+scoreboard objectives add F-GameCount dummy
 scoreboard objectives add F-Used-Lp minecraft.used:minecraft.lingering_potion
+scoreboard objectives add F-Leave minecraft.custom:leave_game
 team add Spec
 team add Player
 team modify Spec color gray
@@ -26,3 +28,4 @@ scoreboard players set $1024 F-Temp 1024
 scoreboard players set $2048 F-Temp 2048
 scoreboard players set $4096 F-Temp 4096
 scoreboard players set $Timer F-Timer -1
+execute unless score $ F-GameCount matches 0.. run scoreboard players set $ F-GameCount 0
