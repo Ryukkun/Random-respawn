@@ -6,7 +6,7 @@
 function random-respawn:core/reset-tags
 
 #Success Detect reset
-data modify storage random-respawn SpreadSuccess set value 0b
+data modify storage random-respawn: SpreadSuccess set value 0b
 
 
 #Test Marker
@@ -19,8 +19,8 @@ execute if score $gm F-Temp matches 4 run function random-respawn:core/4/spreadt
 
 
 # 成功
-execute unless data storage random-respawn {SpreadSuccess:0b} run scoreboard players set $SpreadTestChunk F-Timer 0
-execute unless data storage random-respawn {SpreadSuccess:0b} run function random-respawn:core/sp/forceload
+execute unless data storage random-respawn: {SpreadSuccess:0b} run scoreboard players set $SpreadTestChunk F-Timer 0
+execute unless data storage random-respawn: {SpreadSuccess:0b} run function random-respawn:core/sp/forceload
 
 #失敗
-execute if data storage random-respawn {SpreadSuccess:0b} run kill @e[tag=First-SP]
+execute if data storage random-respawn: {SpreadSuccess:0b} run kill @e[tag=First-SP]

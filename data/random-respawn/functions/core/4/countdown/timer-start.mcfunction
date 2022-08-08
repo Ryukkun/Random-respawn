@@ -9,5 +9,4 @@ execute as @a at @s run playsound minecraft:block.note_block.flute master @s ~ ~
 title @a times 10 70 20
 scoreboard players operation $Timer F-Timer = $SetTimer F-Timer
 clear @a
-scoreboard players set $StopW F-Timer 0
 execute as @a[team=Player] at @s run spawnpoint @s ~ ~ ~
