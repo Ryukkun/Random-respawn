@@ -1,3 +1,4 @@
-execute if score $Distance F-MapCenter matches 1.. at @s run tp ^ ^ ^1
-execute if score $Distance F-MapCenter matches 1.. run scoreboard players remove $Distance F-MapCenter 1
-execute if score $Distance F-MapCenter matches 1.. run function random-respawn:map-center/tp/1
+
+scoreboard players operation $Distance F-MapCenter += $Distance F-MapCenter
+execute if score $Distance F-MapCenter matches 0.. run function random-respawn:map-center/tp/0
+execute if score $Distance F-MapCenter matches ..-1 positioned ^ ^ ^2 run function random-respawn:map-center/tp/0
