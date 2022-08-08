@@ -26,7 +26,7 @@ execute if score $gm F-Temp matches 1 run function random-respawn:core/1-3/sprea
 
 # 成功
 execute unless data storage random-respawn {SpreadSuccess:0b} run scoreboard players set $SpreadTestChunk F-Timer 0
-execute unless data storage random-respawn {SpreadSuccess:0b} run function random-respawn:core/sp/forceload
+execute unless data storage random-respawn {SpreadSuccess:0b} at @e[tag=First-SP] run forceload add ~ ~
 
 #失敗
 execute if data storage random-respawn {SpreadSuccess:0b} run kill @e[tag=First-SP]
