@@ -5,5 +5,5 @@
 # Main Game
 execute if score $Timer F-Timer matches 0.. run function random-respawn:core/main
 
-# Waiting
-execute if score $Timer F-Timer matches -1 run function random-respawn:waiting
+# Waiting team-change
+execute if score $Timer F-Timer matches -1 run function random-respawn:team/potion-change
