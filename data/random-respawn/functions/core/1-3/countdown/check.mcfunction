@@ -44,7 +44,7 @@ execute if data storage random-respawn: {StartError:0b} run function random-resp
 # インベントリ取得
 
 #### reset storage
-execute if data storage random-respawn: {StartError:0b} run data remove storage minecraft:random-respawn FilledMap
+execute if data storage random-respawn: {StartError:0b} run data remove storage random-respawn: FilledMap
 
 #### Get filled_map
 execute if data storage random-respawn: {StartError:0b} if data storage random-respawn: {Setting:[{MapEnable:1b}]} run data modify storage random-respawn: FilledMap append from entity @s Inventory.[{Slot:-106b}]

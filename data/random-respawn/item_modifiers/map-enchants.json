@@ -1,0 +1,11 @@
+[
+    {
+      "function": "minecraft:set_enchantments",
+      "enchantments": {
+        "minecraft:binding_curse": 0,
+        "minecraft:vanishing_curse": 0
+      },
+      "add": false
+    }
+  ]
+  

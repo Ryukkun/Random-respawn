@@ -15,7 +15,7 @@ execute as @a[team=Player] at @s unless data entity @s SpawnX run function rando
 execute if score $Timer F-Timer matches 0 run function random-respawn:core/finish/finish-time-out
 
 # FilledMap
-item replace entity @a[team=Player] armor.head from entity @e[tag=map-center,limit=1] armor.head
+execute if score $gm F-Temp matches 1..3 if data storage random-respawn: {Setting:[{MapEnable:1b}]} run item replace entity @a[team=Player] armor.head from entity @e[tag=map-center,limit=1] armor.head
 
 # プレイ中に抜けちゃったの？
 execute as @a[scores={F-Leave=1..}] unless score @s F-GameCount = $ F-GameCount run function random-respawn:team/join-in-play
