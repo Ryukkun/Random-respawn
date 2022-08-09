@@ -16,7 +16,7 @@ execute if data storage random-respawn: {StartError:2b} run tellraw @a [{"text":
 
 #gm
 execute unless score $gm F-Temp matches 1..4 run data merge storage random-respawn: {StartError:3b}
-execute if data storage random-respawn: {StartError:3b} run tellraw @a [{"text":"Error:3 GM"}]
+execute if data storage random-respawn: {StartError:3b} run tellraw @a [{"text":"Error:3 gm"}]
 
 #Spread Test
 execute if data storage random-respawn: {StartError:0b} run tellraw @s "拡散test 少々重くなります"
