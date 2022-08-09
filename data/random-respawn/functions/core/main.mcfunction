@@ -20,5 +20,8 @@ item replace entity @a[team=Player] armor.head from entity @e[tag=map-center,lim
 # プレイ中に抜けちゃったの？
 execute as @a[scores={F-Leave=1..}] unless score @s F-GameCount = $ F-GameCount run function random-respawn:team/join-in-play
 
+# Map 範囲内か
+execute if score $Timer F-Timer <= $HintTimer F-Timer run function random-respawn:core/in-map/main
+
 # actionbar
 function random-respawn:core/actionbar

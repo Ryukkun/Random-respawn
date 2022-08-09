@@ -10,3 +10,5 @@ title @a times 10 70 20
 scoreboard players operation $Timer F-Timer = $SetTimer F-Timer
 clear @a
 execute as @a[team=Player] at @s run spawnpoint @s ~ ~ ~
+execute store result score @a[team=Player] F-GameCount run scoreboard players add $ F-GameCount 1
+data modify storage random-respawn: MeetSuccess set value 0b

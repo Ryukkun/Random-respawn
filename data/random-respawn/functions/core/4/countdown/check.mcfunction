@@ -33,7 +33,5 @@ execute unless data storage random-respawn: {StartError:0b} run playsound minecr
 #いいよ! スタートだ!  いっけええぇぇぇぇぇ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 execute if data storage random-respawn: {StartError:0b} run data merge storage random-respawn: {Setting:[{MapEnable:0b}]}
-execute if data storage random-respawn: {StartError:0b} run schedule function random-respawn:core/4/countdown/timer-start 5s append
-execute if data storage random-respawn: {StartError:0b} run schedule function random-respawn:core/countdown/1 4s append
-execute if data storage random-respawn: {StartError:0b} run schedule function random-respawn:core/countdown/2 3s append
-execute if data storage random-respawn: {StartError:0b} run schedule function random-respawn:core/countdown/3 2s append
+execute if data storage random-respawn: {StartError:0b} run scoreboard players set $Timer F-Timer -2
+execute if data storage random-respawn: {StartError:0b} run function random-respawn:core/sp/forceload

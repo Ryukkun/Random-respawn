@@ -60,3 +60,10 @@ execute if score $ F-Temp matches 0 run data modify storage random-respawn: book
 execute if score $ F-Temp matches 1 run data modify storage random-respawn: book.gm.debug set value '{"text":" ⦿","color":"green","clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run gamerule reducedDebugInfo false"}}'
 
 scoreboard players reset $ F-Temp
+
+
+
+########## Warning
+
+# map-center
+execute unless score @e[tag=map-center,limit=1] F-GameCount = $gm F-Temp run function random-respawn:map-center/gm-change
