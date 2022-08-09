@@ -12,6 +12,6 @@ clear @a
 execute as @a[team=Player] at @s run spawnpoint @s ~ ~ ~
 execute store result score @a[team=Player] F-GameCount run scoreboard players add $ F-GameCount 1
 data modify storage random-respawn: MeetSuccess set value 0b
-gamerule reducedDebugInfo true
+
 
 execute if data storage random-respawn: {Setting:[{MapEnable:1b}]} run function random-respawn:core/1-3/filledmap/get-map

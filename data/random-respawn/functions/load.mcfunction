@@ -30,7 +30,7 @@ scoreboard players set $512 F-Temp 512
 scoreboard players set $1024 F-Temp 1024
 scoreboard players set $2048 F-Temp 2048
 scoreboard players set $4096 F-Temp 4096
-scoreboard players set $Timer F-Timer -1
+execute unless score $Timer F-Timer matches 0.. run scoreboard players set $Timer F-Timer -1
 execute unless score $ F-GameCount matches 0.. run scoreboard players set $ F-GameCount 0
 execute unless score $SetTimer F-Timer matches 0.. run scoreboard players set $SetTimer F-Timer 72000
 execute unless score $HintTimer F-Timer matches 0.. run scoreboard players set $HintTimer F-Timer 24000
