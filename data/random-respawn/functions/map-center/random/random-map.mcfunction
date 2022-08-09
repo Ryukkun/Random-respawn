@@ -7,7 +7,7 @@ scoreboard players operation $random-mapZ F-Temp /= $100 F-Temp
 
 execute positioned -19800000 0 -19800000 run function random-respawn:map-center/random/loop_main
 
-#tp @s ~ ~ ~ ~ ~
+tp @s ~ ~ ~ ~ ~
 
 # Num
 scoreboard players add $random-map F-Temp 1
