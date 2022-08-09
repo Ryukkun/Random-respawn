@@ -38,6 +38,7 @@ execute unless data storage random-respawn: {StartError:0b} run playsound minecr
 
 execute if data storage random-respawn: {StartError:0b} run scoreboard players set $Timer F-Timer -2
 execute if data storage random-respawn: {StartError:0b} run function random-respawn:core/sp/forceload
+execute if data storage random-respawn: {StartError:0b} run tag @s add F-Fin-Book
 
 
 
