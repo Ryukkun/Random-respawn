@@ -20,6 +20,7 @@ team modify Spec prefix [{"text":" ","color":"#6a6a6a","strikethrough":true},{"t
 team modify Player prefix [{"text":" ","color":"#008e12","strikethrough":true},{"text":"|","color":"#1aaa28","strikethrough":true},{"text":"|","color":"#34c73e","strikethrough":false},{"text":"参","color":"#4de353","strikethrough":false},{"text":"加","color":"#4de353","strikethrough":false},{"text":"|","color":"#34c73e","strikethrough":false},{"text":"|","color":"#1aaa28","strikethrough":true},{"text":" ","color":"#008e12","strikethrough":true},{"text":" ","strikethrough":false}]
 scoreboard players set $1200 F-Temp 1200
 scoreboard players set $72000 F-Temp 72000
+scoreboard players set $100 F-Temp 100
 scoreboard players set $60 F-Temp 60
 scoreboard players set $20 F-Temp 20
 scoreboard players set $19 F-Temp 19
@@ -33,3 +34,4 @@ scoreboard players set $Timer F-Timer -1
 execute unless score $ F-GameCount matches 0.. run scoreboard players set $ F-GameCount 0
 execute unless score $SetTimer F-Timer matches 0.. run scoreboard players set $SetTimer F-Timer 72000
 execute unless score $HintTimer F-Timer matches 0.. run scoreboard players set $HintTimer F-Timer 24000
+execute unless score $random-map F-Temp matches 0.. run scoreboard players set $random-map F-Temp 0
