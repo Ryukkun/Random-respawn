@@ -1,4 +1,4 @@
-# Load by 
+# Load by random-respawn:core/main
 # 
 # マップ内にいるかどうかの通知
 #-----------------------------------

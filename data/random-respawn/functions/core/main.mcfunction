@@ -21,7 +21,11 @@ execute if score $gm F-Temp matches 1..3 if data storage random-respawn: {Settin
 execute as @a[scores={F-Leave=1..}] unless score @s F-GameCount = $ F-GameCount run function random-respawn:team/join-in-play
 
 # Map 範囲内か
-execute if score $Timer F-Timer <= $HintTimer F-Timer run function random-respawn:core/in-map/main
+execute if score $Timer F-Timer <= $HintTimer F-Timer run function random-respawn:core/in-map/player
+function random-respawn:core/in-map/spec
 
 # actionbar
 function random-respawn:core/actionbar
+
+# Spec particle
+execute if score $0.5 F-Timer matches 0 as @a[team=Spec] at @s positioned ~ ~1 ~ unless entity @p[distance=..10,team=Player] facing entity @p[team=Player] feet run function random-respawn:core/spec-particle

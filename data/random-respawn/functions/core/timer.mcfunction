@@ -19,3 +19,8 @@ scoreboard players operation $Sec F-Timer /= $20 F-Temp
 #sec 1の位
 scoreboard players reset $0 F-Timer
 execute if score $Sec F-Timer matches 0..9 run scoreboard players set $0 F-Timer 0
+
+
+#10
+scoreboard players operation $0.5 F-Timer = $Timer F-Timer
+scoreboard players operation $0.5 F-Timer %= $10 F-Temp

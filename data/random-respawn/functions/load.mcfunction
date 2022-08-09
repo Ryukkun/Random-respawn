@@ -21,6 +21,7 @@ team modify Player prefix [{"text":" ","color":"#008e12","strikethrough":true},{
 scoreboard players set $1200 F-Temp 1200
 scoreboard players set $72000 F-Temp 72000
 scoreboard players set $100 F-Temp 100
+scoreboard players set $10 F-Temp 10
 scoreboard players set $60 F-Temp 60
 scoreboard players set $20 F-Temp 20
 scoreboard players set $19 F-Temp 19
