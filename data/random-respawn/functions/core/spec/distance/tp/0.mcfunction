@@ -1,0 +1,1 @@
+execute if entity @s[distance=0.1..] run scoreboard players add @s F-Distance 1

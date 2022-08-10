@@ -6,7 +6,7 @@
 function random-respawn:core/timer
 
 # meet
-#function random-respawn:core/meet/meet-detect
+function random-respawn:core/meet/meet-detect
 
 # 初期リスに戻った時
 execute as @a[team=Player] at @s unless data entity @s SpawnX run function random-respawn:core/sp/tp-sp
@@ -32,4 +32,4 @@ execute if score $0.5 F-Timer matches 0 as @a[team=Spec] at @s positioned ~ ~0.2
 
 # Spec Effect
 effect give @a[team=Spec,gamemode=spectator] invisibility 1 0 true
-effect give @a[team=Spec] night_vision 1 0 true
+effect give @a[team=Spec] night_vision 11 0 true
