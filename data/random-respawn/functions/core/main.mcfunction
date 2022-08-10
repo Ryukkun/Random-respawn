@@ -6,7 +6,7 @@
 function random-respawn:core/timer
 
 # meet
-function random-respawn:core/meet/meet-detect
+#function random-respawn:core/meet/meet-detect
 
 # 初期リスに戻った時
 execute as @a[team=Player] at @s unless data entity @s SpawnX run function random-respawn:core/sp/tp-sp
