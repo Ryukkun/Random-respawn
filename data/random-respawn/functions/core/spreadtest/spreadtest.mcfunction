@@ -3,7 +3,8 @@
 #--------------------
 
 #reset
-function random-respawn:core/reset-tags
+execute at @e[tag=First-SP] run forceload remove ~ ~
+kill @e[tag=First-SP]
 
 #Success Detect reset
 data modify storage random-respawn: SpreadSuccess set value 0b

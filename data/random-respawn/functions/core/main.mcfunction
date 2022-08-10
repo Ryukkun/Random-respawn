@@ -16,6 +16,8 @@ execute if score $Timer F-Timer matches 0 run function random-respawn:core/finis
 
 # FilledMap
 execute if score $gm F-Temp matches 1..3 if data storage random-respawn: {Setting:[{MapEnable:1b}]} run item replace entity @a[team=Player,nbt=!{Inventory:[{Slot:103b,id:"minecraft:filled_map"}]}] armor.head from entity @e[tag=map-center,limit=1] armor.head
+execute if score $gm F-Temp matches 1..3 if data storage random-respawn: {Setting:[{MapEnable:1b}]} run item replace entity @a[team=Spec,nbt=!{Inventory:[{Slot:0b,id:"minecraft:filled_map"}]}] hotbar.0 from entity @e[tag=map-center,limit=1] armor.head
+execute if score $gm F-Temp matches 1..3 if data storage random-respawn: {Setting:[{MapEnable:1b}]} run kill @e[nbt={Item:{tag:{RandomRespawn:{tag:3b}}}}]
 
 # プレイ中に抜けちゃったの？
 execute as @a[scores={F-Leave=1..}] unless score @s F-GameCount = $ F-GameCount run function random-respawn:team/join-in-play
