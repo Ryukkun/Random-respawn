@@ -37,4 +37,10 @@ execute unless score $ F-GameCount matches 0.. run scoreboard players set $ F-Ga
 execute unless score $SetTimer F-Timer matches 0.. run scoreboard players set $SetTimer F-Timer 72000
 execute unless score $HintTimer F-Timer matches 0.. run scoreboard players set $HintTimer F-Timer 24000
 execute unless score $random-map F-Temp matches 0.. run scoreboard players set $random-map F-Temp 0
-execute unless score $spec-gm F-Temp matches 0.. run scoreboard players set $spec-gm F-Temp 1 
+execute unless score $spec-gm F-Temp matches 0.. run scoreboard players set $spec-gm F-Temp 2
+execute unless data storage random-respawn: book run data merge storage random-respawn: {book:{map:['','','',''],gm:['','']}}
+
+# version
+forceload add 0 0
+summon minecraft:armor_stand ~ -70 ~ {NoGravity:1b,Silent:1b,Marker:1b,Tags:["F-TestY"]}
+schedule function random-respawn:test-y 10s
