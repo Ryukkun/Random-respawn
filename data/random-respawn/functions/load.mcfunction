@@ -10,6 +10,7 @@ scoreboard objectives add F-Member dummy
 scoreboard objectives add F-GameCount dummy
 scoreboard objectives add F-Used-Lp minecraft.used:minecraft.lingering_potion
 scoreboard objectives add F-Leave minecraft.custom:leave_game
+scoreboard objectives add F-Distance dummy
 team add Spec
 team add Player
 team modify Spec color gray
@@ -36,3 +37,4 @@ execute unless score $ F-GameCount matches 0.. run scoreboard players set $ F-Ga
 execute unless score $SetTimer F-Timer matches 0.. run scoreboard players set $SetTimer F-Timer 72000
 execute unless score $HintTimer F-Timer matches 0.. run scoreboard players set $HintTimer F-Timer 24000
 execute unless score $random-map F-Temp matches 0.. run scoreboard players set $random-map F-Temp 0
+execute unless score $spec-gm F-Temp matches 0.. run scoreboard players set $spec-gm F-Temp 1 

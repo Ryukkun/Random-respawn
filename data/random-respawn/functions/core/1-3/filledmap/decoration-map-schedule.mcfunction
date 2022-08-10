@@ -1,1 +1,0 @@
-execute as @e[tag=ILoveFilledMap] at @s run function random-respawn:core/1-3/filledmap/decoration-map

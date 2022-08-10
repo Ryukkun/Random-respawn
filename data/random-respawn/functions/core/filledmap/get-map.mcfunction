@@ -12,4 +12,4 @@ data modify entity @e[tag=map-center,limit=1] ArmorItems[3] set from storage ran
 
 
 # みんなに配ろう!!
-execute as @e[tag=First-SP] at @s run function random-respawn:core/1-3/filledmap/decoration-map
+execute as @e[tag=First-SP] at @s run function random-respawn:core/filledmap/decoration-map

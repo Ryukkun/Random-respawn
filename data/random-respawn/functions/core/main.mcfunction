@@ -6,7 +6,7 @@
 function random-respawn:core/timer
 
 # meet
-function random-respawn:core/meet/meet-detect
+#function random-respawn:core/meet/meet-detect
 
 # 初期リスに戻った時
 execute as @a[team=Player] at @s unless data entity @s SpawnX run function random-respawn:core/sp/tp-sp
@@ -25,7 +25,11 @@ execute if score $Timer F-Timer <= $HintTimer F-Timer run function random-respaw
 function random-respawn:core/in-map/spec
 
 # actionbar
-function random-respawn:core/actionbar
+function random-respawn:core/actionbar/actionbar
 
 # Spec particle
-execute if score $0.5 F-Timer matches 0 as @a[team=Spec] at @s positioned ~ ~1 ~ unless entity @p[distance=..10,team=Player] facing entity @p[team=Player] feet run function random-respawn:core/spec-particle
+execute if score $0.5 F-Timer matches 0 as @a[team=Spec] at @s positioned ~ ~0.2 ~ unless entity @p[distance=..30,team=Player] facing entity @p[team=Player] feet run function random-respawn:core/spec/spec-particle
+
+# Spec Effect
+effect give @a[team=Spec,gamemode=spectator] invisibility 1 0 true
+effect give @a[team=Spec] night_vision 1 0 true

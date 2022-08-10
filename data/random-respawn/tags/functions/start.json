@@ -1,6 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"random-respawn:core/countdown/count-down-start"
+		"random-respawn:core/countdown/check"
 	]
 }

@@ -20,11 +20,11 @@ execute if data storage random-respawn: {StartError:3b} run tellraw @a [{"text":
 
 #Filled Map
 data merge storage random-respawn: {Setting:[{MapEnable:0b}]}
-execute if data entity @s {Inventory:[{Slot:-106b,id:"minecraft:filled_map"}]} run data merge storage random-respawn: {Setting:[{MapEnable:1b}]}
+execute if score $gm F-Temp matches 1..3 if data entity @s {Inventory:[{Slot:-106b,id:"minecraft:filled_map"}]} run data merge storage random-respawn: {Setting:[{MapEnable:1b}]}
 
 #Spread Test
 execute if data storage random-respawn: {StartError:0b} run tellraw @s "拡散test 少々重くなります"
-execute if data storage random-respawn: {StartError:0b} run function random-respawn:core/1-3/spreadtest/spreadtest
+execute if data storage random-respawn: {StartError:0b} run function random-respawn:core/spreadtest/spreadtest
 execute if data storage random-respawn: {StartError:0b} if data storage random-respawn: {SpreadSuccess:0b} run data merge storage random-respawn: {StartError:5b}
 execute if data storage random-respawn: {StartError:5b} run tellraw @a [{"text":"Error:5 拡散させるスペースが足りませんでした"}]
 

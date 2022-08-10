@@ -52,14 +52,23 @@ execute if score $gm F-Temp matches 4 run data modify storage random-respawn: bo
 ########## Gamerule
 
 execute store result score $ F-Temp run gamerule keepInventory
-execute if score $ F-Temp matches 0 run data modify storage random-respawn: book.gm.keepI set value '[{"text":"\'","color":"yellow"},{"text":" ●","color":"red","clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run gamerule keepInventory true"}}]'
-execute if score $ F-Temp matches 1 run data modify storage random-respawn: book.gm.keepI set value '{"text":" ⦿","color":"green","clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run gamerule keepInventory false"}}'
+execute if score $ F-Temp matches 0 run data modify storage random-respawn: book.gl.keepI set value '[{"text":"\'","color":"yellow"},{"text":" ●","color":"red","clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run gamerule keepInventory true"}}]'
+execute if score $ F-Temp matches 1 run data modify storage random-respawn: book.gl.keepI set value '{"text":" ⦿","color":"green","clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run gamerule keepInventory false"}}'
 
 execute store result score $ F-Temp run gamerule reducedDebugInfo
-execute if score $ F-Temp matches 0 run data modify storage random-respawn: book.gm.debug set value '[{"text":"\'","color":"yellow"},{"text":" ●","color":"red","clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run gamerule reducedDebugInfo true"}}]'
-execute if score $ F-Temp matches 1 run data modify storage random-respawn: book.gm.debug set value '{"text":" ⦿","color":"green","clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run gamerule reducedDebugInfo false"}}'
+execute if score $ F-Temp matches 0 run data modify storage random-respawn: book.gl.debug set value '[{"text":"\'","color":"yellow"},{"text":" ●","color":"red","clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run gamerule reducedDebugInfo true"}}]'
+execute if score $ F-Temp matches 1 run data modify storage random-respawn: book.gl.debug set value '{"text":" ⦿","color":"green","clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run gamerule reducedDebugInfo false"}}'
 
 scoreboard players reset $ F-Temp
+
+
+
+########## Gamemode
+execute unless score $spec-gm F-Temp matches 1 run data modify storage random-respawn: book.gm[0] set value '{"text":"[creative]","color":"gray","underlined":true,"clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run scoreboard players set $spec-gm F-Temp 1"},"hoverEvent":{"action":"show_text","contents":[{"text":"観戦者のモラルが試される\\n観戦者が 観戦 だけで済まされると思わない方がいい。そう 世は戦国時代\\n透明化だけはつけておきます 地図見れるメリットがあるね :]"}]}}'
+execute if score $spec-gm F-Temp matches 1 run data modify storage random-respawn: book.gm[0] set value '{"text":"[creative]","color":"green","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"観戦者のモラルが試される\\n観戦者が 観戦 だけで済まされると思わない方がいい。そう 世は戦国時代\\n透明化だけはつけておきます 地図見れるメリットがあるね :]"}]}}'
+
+execute unless score $spec-gm F-Temp matches 2 run data modify storage random-respawn: book.gm[1] set value '{"text":"[spectator]","color":"gray","underlined":true,"clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run scoreboard players set $spec-gm F-Temp 2"},"hoverEvent":{"action":"show_text","contents":[{"text":"安定のスペクテーター\\n大人数でやる時はこっちの方がいいかも :]"}]}}'
+execute if score $spec-gm F-Temp matches 2 run data modify storage random-respawn: book.gm[1] set value '{"text":"[spectator]","color":"green","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"安定のスペクテーター\\n大人数でやる時はこっちの方がいいかも :]"}]}}'
 
 
 

@@ -13,7 +13,7 @@ data modify entity @s ArmorItems[2] set from entity @e[tag=map-center,limit=1] A
 data modify entity @s ArmorItems[2].tag set value {Decorations:[{x:0b,z:0b,type:4b,rot:180.0d,id:""}]}
 
 ### みんな乱数ほしい顔してた
-function random-respawn:core/1-3/random-str/random-str
+function random-respawn:core/random-str/random-str
 
 
 ### Pos代入
