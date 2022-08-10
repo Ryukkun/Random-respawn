@@ -5,6 +5,7 @@ scoreboard players set $Timer F-Timer -1
 item modify entity @a[team=Player,nbt={Inventory:[{Slot:103b,id:"minecraft:filled_map"}]}] armor.head random-respawn:map-enchants
 execute as @a[tag=F-Fin-Book] run function random-respawn:book/get-book
 tag @a[tag=F-Fin-Book] remove F-Fin-Book
+effect clear @a[team=Spec] night_vision
 
 # show sp
 execute as @e[tag=First-SP] at @s run function random-respawn:core/finish/show-sp

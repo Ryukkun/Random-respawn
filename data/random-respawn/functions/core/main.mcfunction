@@ -32,4 +32,4 @@ execute if score $0.5 F-Timer matches 0 as @a[team=Spec] at @s positioned ~ ~0.2
 
 # Spec Effect
 effect give @a[team=Spec,gamemode=spectator] invisibility 1 0 true
-effect give @a[team=Spec] night_vision 11 0 true
+effect give @a[team=Spec] night_vision 100 0 true

@@ -16,6 +16,7 @@ execute store result score @a[team=Player] F-GameCount run scoreboard players ad
 data modify storage random-respawn: MeetSuccess set value 0b
 execute if score &spec-gm F-Temp matches 1 run gamemode creative @a[team=Spec]
 execute if score &spec-gm F-Temp matches 2 run gamemode spectator @a[team=Spec]
+gamemode survival @a[team=Player]
 
 
 execute if data storage random-respawn: {Setting:[{MapEnable:1b}]} run function random-respawn:core/filledmap/get-map
