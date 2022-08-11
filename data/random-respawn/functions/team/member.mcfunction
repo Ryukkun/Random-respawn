@@ -1,4 +1,4 @@
 execute store result score @s F-Member run scoreboard players add $Base F-Member 1
 team join Spec @s
 tellraw @s [{"text":" ","bold":true},{"text":" |","color":"white","strikethrough":true},{"text":"|","color":"white"},{"text":" Random ","color":"gold","bold":true},{"text":"Respawn ","color":"yellow","bold":true},{"text":"|","color":"white"},{"text":"| ","color":"white","strikethrough":true},{"text":"  "},{"text":"導入確認\n もしあなたがOP所持者であった場合 ","font":"uniform","color":"gray"},{"text":"/function #random-respawn:book","font":"uniform","color":"white","bold":true,"underlined":true,"clickEvent":{"action":"run_command","value":"/function #random-respawn:book"}},{"text":" と、打つことで 設定本を入手することができます","font":"uniform","color":"gray"}]
-function random-respawn:team/join-in-play
+execute if score $timer F-Timer matches 0.. run function random-respawn:team/join-in-play

@@ -5,6 +5,7 @@ execute as @a at @s run playsound minecraft:block.note_block.flute master @s ~ ~
 
 #Spread Test
 function random-respawn:core/spreadtest/spreadtest
-execute if data storage random-respawn: {SpreadSuccess:0b} run tellraw @a [{"text":"Error:5 拡散させるスペースが足りませんでした"}]
+execute unless data storage random-respawn: {SpreadSuccess:0b} run scoreboard players set $SpreadTestChunk F-Timer 0
+execute unless data storage random-respawn: {SpreadSuccess:0b} run function random-respawn:core/sp/forceload
 
-function random-respawn:core/sp/forceload
+execute if data storage random-respawn: {SpreadSuccess:0b} run tellraw @a [{"text":"Error:5 拡散させるスペースが足りませんでした"}]

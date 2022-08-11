@@ -14,8 +14,8 @@ clear @a
 execute as @a[team=Player] at @s run spawnpoint @s ~ ~ ~
 execute store result score @a[team=Player] F-GameCount run scoreboard players add $ F-GameCount 1
 data modify storage random-respawn: MeetSuccess set value 0b
-execute if score &spec-gm F-Temp matches 1 run gamemode creative @a[team=Spec]
-execute if score &spec-gm F-Temp matches 2 run gamemode spectator @a[team=Spec]
+execute if score $spec-gm F-Temp matches 1 run gamemode creative @a[team=Spec]
+execute if score $spec-gm F-Temp matches 2 run gamemode spectator @a[team=Spec]
 gamemode survival @a[team=Player]
 schedule clear random-respawn:core/sp/forceload
 

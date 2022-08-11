@@ -1,0 +1,1 @@
+execute as @a[tag=F-In-The-Middle] at @s run function random-respawn:core/sp/alone-forceload
