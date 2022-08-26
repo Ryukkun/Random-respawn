@@ -11,6 +11,7 @@ scoreboard objectives add F-GameCount dummy
 scoreboard objectives add F-Used-Lp minecraft.used:minecraft.lingering_potion
 scoreboard objectives add F-Leave minecraft.custom:leave_game
 scoreboard objectives add F-Distance dummy
+scoreboard objectives add F-Death deathCount
 team add Spec
 team add Player
 team modify Spec color gray

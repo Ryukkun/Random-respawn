@@ -36,3 +36,9 @@ execute if score $0.5 F-Timer matches 0 as @a[team=Spec] at @s positioned ~ ~0.2
 # Spec Effect
 effect give @a[team=Spec,gamemode=creative] invisibility 1 0 true
 effect give @a[team=Spec] night_vision 100 0 true
+
+# リスポーン時の無敵時間
+effect give @a[scores={F-Death=1..},team=Player] fire_resistance 10 0 true
+effect give @a[scores={F-Death=1..},team=Player] resistance 5 100 true
+effect give @a[scores={F-Death=1..},team=Player] saturation 1 100 true
+scoreboard players set @a F-Death 0
