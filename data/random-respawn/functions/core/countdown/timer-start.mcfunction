@@ -17,6 +17,8 @@ data modify storage random-respawn: MeetSuccess set value 0b
 execute if score $spec-gm F-Temp matches 1 run gamemode creative @a[team=Spec]
 execute if score $spec-gm F-Temp matches 2 run gamemode spectator @a[team=Spec]
 gamemode survival @a[team=Player]
+team modify Spec prefix {"text":""}
+team modify Player prefix {"text":""}
 schedule clear random-respawn:core/sp/forceload
 
 

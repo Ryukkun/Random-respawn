@@ -44,8 +44,8 @@ execute if score $gm F-Temp matches 2 run data modify storage random-respawn: bo
 execute unless score $gm F-Temp matches 3 run data modify storage random-respawn: book.map[2] set value '{"text":"[2048]","color":"gray","underlined":true,"clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run scoreboard players set $gm F-Temp 3"},"hoverEvent":{"action":"show_text","contents":[{"text":"2048m x 2048m  の範囲\\n 地図の縮尺 1:16\\n  (レベル 4/4 [縮尺最大])"}]}}'
 execute if score $gm F-Temp matches 3 run data modify storage random-respawn: book.map[2] set value '{"text":"[2048]","color":"green","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"2048m x 2048m  の範囲\\n 地図の縮尺 1:16\\n  (レベル 4/4 [縮尺最大])"}]}}'
 
-execute unless score $gm F-Temp matches 4 run data modify storage random-respawn: book.map[3] set value '{"text":"[4086]","color":"gray","underlined":true,"clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run scoreboard players set $gm F-Temp 4"},"hoverEvent":{"action":"show_text","contents":[{"text":"4096m x 4096m  の範囲\\n 縮尺最大の地図 計4枚分"}]}}'
-execute if score $gm F-Temp matches 4 run data modify storage random-respawn: book.map[3] set value '{"text":"[4086]","color":"green","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"4096m x 4096m  の範囲\\n 縮尺最大の地図 計4枚分"}]}}'
+execute unless score $gm F-Temp matches 4 run data modify storage random-respawn: book.map[3] set value '{"text":"[4096]","color":"gray","underlined":true,"clickEvent": {"action": "run_command","value": "/execute store success score $Book-R F-Temp run scoreboard players set $gm F-Temp 4"},"hoverEvent":{"action":"show_text","contents":[{"text":"4096m x 4096m  の範囲\\n 縮尺最大の地図 計4枚分"}]}}'
+execute if score $gm F-Temp matches 4 run data modify storage random-respawn: book.map[3] set value '{"text":"[4096]","color":"green","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"4096m x 4096m  の範囲\\n 縮尺最大の地図 計4枚分"}]}}'
 
 
 
