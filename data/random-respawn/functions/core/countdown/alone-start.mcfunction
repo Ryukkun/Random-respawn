@@ -12,6 +12,11 @@ gamemode survival @s
 team join Player @s
 schedule clear random-respawn:core/sp/alone-schedule
 clear @s
+effect clear @a
+effect give @a[team=Player] fire_resistance 10 0 true
+effect give @s[team=Player] resistance 5 100 true
+effect give @s[team=Player] saturation 1 100 true
+effect give @s[team=Player] regeneration 5 120 true
 tag @s remove F-In-The-Middle
 
 
